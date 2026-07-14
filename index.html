@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Daily Flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">DAILY WELLBEING</p>
+        <h1>My daily flow<span>.</span></h1>
+        <p class="intro">Small routines, a calmer day. Check things off as you go.</p>
+        <div class="date-row">
+          <div>
+            <p id="weekday" class="weekday"></p>
+            <p id="full-date" class="full-date"></p>
+          </div>
+          <div class="sun-icon" aria-hidden="true">☀</div>
+        </div>
+      </section>
+
+      <section class="yesterday-card" aria-label="Yesterday's progress">
+        <div class="yesterday-icon">↗</div>
+        <div>
+          <p class="card-label">YESTERDAY</p>
+          <p id="yesterday-text" class="yesterday-text">Your first day starts today.</p>
+        </div>
+      </section>
+
+      <section class="progress-section">
+        <div class="section-heading">
+          <div>
+            <p class="card-label">TODAY'S PROGRESS</p>
+            <p id="progress-copy" class="progress-copy">0 of 7 complete</p>
+          </div>
+          <strong id="percentage">0%</strong>
+        </div>
+        <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+      </section>
+
+      <section class="tasks-section" aria-labelledby="routine-heading">
+        <div class="section-heading routine-heading">
+          <h2 id="routine-heading">Your routine</h2>
+          <button id="add-task-btn" class="text-button" type="button">+ Add task</button>
+        </div>
+        <div id="task-list" class="task-list"></div>
+      </section>
+
+      <form id="add-task-form" class="add-task-form" hidden>
+        <label for="new-task">New daily task</label>
+        <div class="add-input-row">
+          <input id="new-task" maxlength="70" placeholder="e.g. Read for 15 minutes" required />
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <p id="encouragement" class="encouragement">One good check-in at a time.</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
