@@ -2,7 +2,7 @@ const defaultTasks = ["Wake up in the morning", "Freshen up", "Have a healthy br
 const key = "my-daily-flow-data-v1";
 const todayKey = () => new Date().toLocaleDateString("en-CA");
 const dateFor = offset => { const d = new Date(); d.setDate(d.getDate() + offset); return d.toLocaleDateString("en-CA"); };
-let data = JSON.parse(localStorage.getItem(key) || "{\\"tasks\\":[],\\"days\\":{}}");
+let data = JSON.parse(localStorage.getItem(key) || '{"tasks":[],"days":{}}');
 if (!data.tasks.length) data.tasks = defaultTasks.map((text, id) => ({ id: `task-${id}`, text }));
 if (!data.days[todayKey()]) data.days[todayKey()] = [];
 const save = () => localStorage.setItem(key, JSON.stringify(data));
