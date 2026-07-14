@@ -10,8 +10,25 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <section id="auth-screen" class="auth-screen">
+      <div class="auth-card">
+        <p class="eyebrow">PRIVATE DAILY TRACKER</p>
+        <h1>Keep your flow<span>.</span></h1>
+        <p class="intro">Sign in to back up your routine and keep it in sync on every device.</p>
+        <form id="auth-form">
+          <label for="email">Email address</label>
+          <input id="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" required minlength="6" placeholder="At least 6 characters" />
+          <button id="auth-submit" class="primary-button" type="submit">Sign in</button>
+        </form>
+        <p id="auth-message" class="auth-message" role="alert"></p>
+        <p class="auth-switch">New here? <button id="toggle-auth-mode" type="button">Create an account</button></p>
+      </div>
+    </section>
     <main class="app-shell">
       <section class="hero">
+        <div class="account-row"><span id="account-email"></span><button id="sign-out-btn" type="button">Sign out</button></div>
         <p class="eyebrow">DAILY WELLBEING</p>
         <h1>My daily flow<span>.</span></h1>
         <p class="intro">Small routines, a calmer day. Check things off as you go.</p>
@@ -61,6 +78,6 @@
 
       <p id="encouragement" class="encouragement">One good check-in at a time.</p>
     </main>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
